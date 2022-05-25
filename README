@@ -1,0 +1,9 @@
+Сборка в Docker
+$docker build -t timerbot:v1 .
+Запуск образа
+$docker run timerbot:v1
+Пример работы бота смотрим здесь https://t.me/TimerNotiffBot
+
+При желании можно залить на heroku
+Вопросы предложения в телегу @RotSayman
+
