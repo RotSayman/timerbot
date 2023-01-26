@@ -33,10 +33,11 @@ func main() {
 
 	go func() {
 		for {
-			_, err = http.Get("https://afternoon-hollows-92230.herokuapp.com/")
+			_, err = http.Get(fmt.Sprintf("https://%s/", os.Getenv("LINK_HEROKU")))
 			if err != nil {
 				log.Println("Нет соединения с сервером")
 			}
+			// Спим так как хероку рубит работу бота если запросы не приходят в течении 30 минут
 			time.Sleep(time.Minute * 20)
 		}
 	}()
